@@ -2,6 +2,8 @@
 
 See [Landmarks](https://github.com/LexiFi/landmarks) repository for more information about landmarks or check [dune manual](https://dune.readthedocs.io/en/stable/instrumentation.html) for information about instrumenting with dune.
 
+![Terminal Video of commands describe below](demo.gif)
+
 ## Install dependencies using opam
 
 ```
