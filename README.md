@@ -10,18 +10,33 @@ See [Landmarks](https://github.com/LexiFi/landmarks) repository for more informa
 opam install -y --deps-only .
 ```
 
-## Manually triggers instrumentation
+## Triggering the instrumentation
+
+Use the `(instrumentation (backend landmarks))` or  `(instrumentation (backend landmarks --auto))` 
+on `library`/`executable` stanza to tell dune to instrument parts of your code.
+
+Instrumented executables check the value of the `OCAML_LANDMARKS` environnement variable to 
+display the results. Moreover, the preprocessor may also read this variable to activate the 
+"automatic" mode for all the code. You can use the `context` stanza in the dune-workspace 
+file to set this environnement variable during both build and execution. 
+
+### Manually
 
 ```
 dune build --instrument-with landmarks ./test.exe
 OCAML_LANDMARKS=on _build/default/test.exe
 ```
 
-## Instrument using build contexts
+### Using build contexts
 
-The contexts are configured in the `dune-workspace` file.
+The contexts are configured in the `dune-workspace` file. 
+
+For instance, the following commands will execute `test.exe` in the build context `profile` and `profile-auto`.
 
 ```
 dune exec --context profile ./test.exe
 dune exec --context profile-auto ./test.exe
 ```
+
+
+
