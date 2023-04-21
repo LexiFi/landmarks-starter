@@ -34,8 +34,8 @@ The contexts are configured in the `dune-workspace` file.
 For instance, the following commands will execute `test.exe` in the build context `profile` and `profile-auto`.
 
 ```
-dune exec --context profile ./test.exe
-dune exec --context profile-auto ./test.exe
+dune exec --context profiling ./test.exe
+dune exec --context profiling-auto ./test.exe
 ```
 
 
