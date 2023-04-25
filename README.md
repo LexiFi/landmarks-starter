@@ -31,7 +31,7 @@ OCAML_LANDMARKS=on _build/default/test.exe
 
 The contexts are configured in the `dune-workspace` file. 
 
-For instance, the following commands will execute `test.exe` in the build context `profile` and `profile-auto`.
+For instance, the following commands will execute `test.exe` in the build context `profiling` and `profiling-auto`.
 
 ```
 dune exec --context profiling ./test.exe
